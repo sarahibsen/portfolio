@@ -1,0 +1,84 @@
+/* CSS Document */
+
+p
+{
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+footer
+	{
+		border-top: 1px solid #57b1dc;
+		text-align: center;
+		padding-top: 1em;
+	}
+footer img
+	{
+		width: 40px;
+		height: 40px;
+		margin-left: .5em;
+		margin-right: .5em;
+	}
+body
+{
+	background-color: beige;
+	font-family: "Lucida Console", "Courier New", monospace;
+	margin: 0;
+    padding: 0;
+}
+header {
+            background-color: #060606;
+            color: beige;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about, .team, .impact {
+            margin-bottom: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .profile-picture {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .profile-picture img {
+            max-width: 150px;
+            border-radius: 70%;
+        }
