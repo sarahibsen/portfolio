@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="sarahibsen.github.io/navbar.css">
+	<link rel="stylesheet" href="sarahibsen.github.io/footer.css"> 
+	<style>
+	
+.box{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 5px;
+}
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 200px;
+}
+.btn {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 60%;
+  opacity: 0%;
+  cursor: pointer;
+}
+.navbar { 
+	grid-area: navbar; 
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  border: 1px solid #e7e7e7;
+		  background-color: #EBF5C4;
+			}
+
+	li {
+	  		float: left;
+		}
+
+	li a {
+		  display: block;
+		  color: black;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+	li a:hover:not(.active) {
+	  background-color: #ddd;
+	}
+
+	li a.active {
+	  color: lightpink;
+	  background-color: #FCEAF3;
+	}
+	}
+.footer { grid-area: footer; 
+		
+		border-top: 1px solid #57b1dc;
+		text-align: center;
+		padding-top: 1em;
+	
+	footer img
+		{
+			width: 40px;
+			height: 40px;
+			margin-left: .5em;
+			margin-right: .5em;
+		}
+		}
+
+	</style>
+</head>
+<body>
+	 
+    <header>
+        <h1>S. A. Ibsen</h1>
+		<div class = "navbar">
+			
+        
+            <ul>
+				<li><a href= "sarahibsen.github.io/index.html"> Home </a></li>
+				<li><a href= "sarahibsen.github.io/about.html"> About </a></li>
+                <li><a href="#photography">Photography</a></li>
+                <li><a href="#webdesigns">Animations</a></li>
+                <li><a href="#graphicdesign">Graphic Design</a></li>
+				
+            </ul>
+        
+		</div>
+    </header>
+	<div class = "box">
+   	 <div class = "container">
+  		<img src= "sarahibsen.github.io/images/hannah.jpg" alt = "Hannah Portrait" style = "width: 150%">
+		 <button class = "btn" onclick = ""> 
+		 </button>
+		 <h2> Photography </h2>
+		</div>
+		<div class = "container">
+			<img src= "sarahibsen.github.io/images/witcher.gif" alt = "Witcher Animation" style = "width: 200%">
+			<button class = "btn" onclick = "">
+			</button>
+			<h2> Animations </h2>
+		</div>
+    	<div class = "container">
+			<img src = "sarahibsen.github.io/images/infographic.PNG" alt= "Infographic" style = "width: 200%">
+			<button class = "btn" onclick = "">
+			</button>
+			<h2> Graphic Design </h2>
+			</div>
+ 
+   
+  </div>
+		
+	<div class="footer">
+		<footer>
+			<p>&copy; S. A. Ibsen </p>
+			<p>
+			  <a href="https://www.youtube.com/anikabunny27"> 
+				<img src="sarahibsen.github.io/images/youtube.png" alt="youtube">
+			  </a>
+			  <a href="https://www.instagram.com/tullibeee/">
+				<img src="sarahibsen.github.io/images/instagram.svg" alt="instagram">
+			  </a>
+			  <a href="https://www.github.com/sarahibsen">
+				  <img src="sarahibsen.github.io/images/github.png" alt="github">
+				</a>
+			</p>
+
+		</footer>
+		</div>
+	
+</body>
+</html>
