@@ -1,0 +1,69 @@
+
+/* CSS Document */
+
+body {
+  background-image: url("../images/cute-white-flowers-background-horizontal_693955-21.jpg.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: serif;
+  color: #333; /* Dark gray text color */
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 20% 10% 10%;
+  max-width: 80%;
+  margin: 0 auto;
+  grid-gap: 10px;
+  height: 100vh;
+}
+
+header {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  background-color: #FFACB7; /* Light pink background color */
+  text-align: center;
+  padding: 10px;
+}
+
+aside {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 8;
+  background-color: #FF6B6B; /* Coral background color */
+  padding: 10px;
+}
+
+article {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 8;
+  background-color: #FFD3B6; /* Light orange background color */
+  padding: 10px;
+}
+
+footer {
+  grid-column: 1 / span 2;
+  grid-row: 10 / span 1;
+  background-color: #F68A65; /* Light brown background color */
+  text-align: center;
+  padding: 10px;
+}
+
+.button {
+  background-color: #1622AE;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+p {
+  font-size: 18px; /* Larger text size */
+}
+
