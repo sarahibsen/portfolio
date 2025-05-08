@@ -1,2 +1,2 @@
 # portfolio
-portfolio created for github pages &lt;3
+portfolio created using github pages &lt;3
