@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Course HomePage </title>
+<style>
+	
+  .center-div 
+	{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	width: 100%;
+  }
+	/*  we want to have five containers per row : ) */
+
+	
+  .card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 5px;
+  }
+ 
+  .container 
+	{
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .btn 
+	{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: url('../images/candy-in-bag-png.png') , auto;
+  }
+
+  body 
+	{
+    cursor: url('../images/candy-in-bag-png.png') , auto;
+    background-image: url("../images/candyman.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+  	}
+
+  .candy img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .candy-bag {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-image: url("../images/candy-in-bag-png.png");
+    background-size: cover;
+    pointer-events: none;
+  }
+  h3
+	{
+		
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"
+	}
+</style>
+</head>
+<body>
+
+<div class="center-div"> <!-- Centering div -->
+  <div class="card candy-store">
+    <!-- Classmate 1 -->
+    <div class="container candy" data-link="http://webpages.uah.edu/~sah0063">
+      <img src="../images/gummybeartray.jpg" alt="Pic1" style="width:50%">
+      <button class="btn"></button>
+      <h3>Sydney</h3>
+    </div>
+    <!-- Classmate 2 -->
+    <div class="container candy" data-link="http://webpages.uah.edu/~dca0013">
+      <img src="../images/dotstray.jpg" alt="dots" style="width:50%">
+      <button class="btn"></button>
+      <h3>Davis</h3>
+    </div>
+	<div class = "container candy" data-link = "http://webpages.uah.edu/~mea0022">
+		<img src = "../images/gummywormtray.jpg" alt = "gummy worms" style = "width: 50%">
+		<button class = "btn"></button>
+	<h3> Malachi </h3>
+  </div>
+	<div class = "container candy" data-link = "http://webpages.uah.edu/~lkb0010">
+		<img src = "../images/lolipoptray.jpg" alt= "lolipop" style = "width: 50%">
+		<button class = "btn"></button>
+	<h3> Suns </h3>
+  </div>
+	<div class = "container candy" data-link = "http://webpages.uah.edu/~hb0050">
+		<img src = "../images/m&mstray.jpg" alt= "m&m" style = "width: 50%">
+		<button class = "btn"></button>
+	<h3> Holly </h3>
+  </div>
+	
+	<div class = "container candy" data-link = "http://webpages.uah.edu/~ccd0013">
+	  <img src ="../images/dotstray.jpg" alt = "Candy -" style = "width: 50%">
+		<button class = "btn"></button>
+	<h3> Cynthia </h3>
+	</div>
+	<div class = "container candy" data-link = "http://webpages.uah.edu/~sai0002">
+		<img src = "../images/gummywormtray.jpg" alt = "Candy -" style = "width: 50%">
+		<button class = "btn"></button>
+		<h3> Sarah </h3>
+	</div>
+	
+	<div class = "container candy" data-link = "http://webpages.uah.edu/~whm0005">
+		<img src = "../images/gummybeartray.jpg" alt = "Candy -" style = "width: 50%">
+		<button class = "btn"></button>
+		<h3> Will </h3>
+	</div>
+	  
+	<div class = "container candy" data-link = "http://webpages.uah.edu/~brm0018">
+		<img src = "../images/m&mstray.jpg" alt = "Candy -" style = "width: 50%">
+		<button class = "btn"></button>
+		<h3> Briana </h3>
+	</div>
+	
+	<div class = "container candy" data-link = "http://webpages.uah.edu/~shw0007">
+		<img src = "../images/lolipoptray.jpg" alt = "Candy -" style = "width: 50%">
+		<button class = "btn"></button>
+		<h3> Samuel </h3>
+	</div>
+	
+    
+  </div>
+</div> <!-- End centering div -->
+
+<div class="candy-bag" id="candy-bag"></div>
+<script>
+  const candyStore = document.querySelector('.candy-store');
+  const candyBag = document.getElementById('candy-bag');
+ 
+  candyStore.addEventListener('mousemove', (e) => {
+  const x = e.clientX - candyBag.offsetWidth / 2;
+  const y = e.clientY - candyBag.offsetHeight / 2;
+  candyBag.style.left = `${x}px`;
+  candyBag.style.top = `${y}px`;
+});
+
+const candies = document.querySelectorAll('.candy');
+candies.forEach((candy) => {
+  candy.addEventListener('click', () => {
+    const candyLink = candy.getAttribute('data-link');
+    window.location.href = candyLink;
+  });
+});
+</script>
+</body>
+</html>
+

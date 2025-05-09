@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Band Showcase</title>
+<link href= "../css/grid2style.css" rel = "stylesheet">
+<link href= "../css/grid2navbar.css" rel="stylesheet">
+<link href= "../css/footer.css" rel="stylesheet">
+</head>
+<!-- I tried to make this grid layout similar to Chen Hui Jing, but, I'm not exactly sure why it turned out this way. there are some things in his code that i don't completely understand so I didn't include it. Also dreamweaver doesn't like the 'fr'  -->
+<body>
+<main>
+  <div class = "container" > 
+	<nav>
+		<!-- nav bar links to specific instances in the page itself as well as to the about page -->
+		<ul>
+			<li> <a href = "../index.html"> Home </a></li>
+			<li> <a href = "../about.html"> About </a></li>
+			<li> <a href= "gridlayout1.html"> HTML Skeleton </a></li>
+		</ul>
+	  </nav>
+	</div>
+  <h2>Smorgasbord</h2>
+  <hr>
+ <div class="wrapper">
+    <div class="band-description">
+        <p class="about">Smorgasbord is a band of musicians from Huntsville, Alabama who enjoy making good sounds for the ear and soul. The brain-child of the brothers Paul and Will Cook, the band features different talented artists who like providing fun beats, tasty grooves, and memorable melodies for the people.</p>
+    </div>
+    <img src="../images/IMG_2322.PNG" alt="Band Image" class="band-image">
+</div>
+
+	
+ <div id="calendar-widget" class="calendar-widget">
+  <!-- Calendar widget will be generated here -->
+</div>
+   
+    
+  
+  <a class="play-button" href="https://open.spotify.com/track/7vUmtrDz1iszhjiKw67Yug?si=c625e6427ae54949" target="_blank">Play Song on Spotify</a>
+	 
+	 
+	 <footer>
+	 <div class="location">
+    <p>Location: Huntsville, AL</p> <br>
+  </div>
+	 </footer>
+  
+	
+</main>
+	<script>
+		/*  javascript for calendar functionality */
+	function createCalendar(id, year, month, highlightedDates) {
+    const container = document.getElementById(id);
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    let calendar = '<table><thead><tr>';
+
+    // Add day names
+    for (let day of days) {
+        calendar += `<th>${day}</th>`;
+    }
+    calendar += '</tr></thead><tbody>';
+
+    // Create a date object
+    let date = new Date(year, month - 1, 1);
+    let firstDay = date.getDay();
+
+    // Pad calendar with empty cells if month doesn't start on Sunday
+    calendar += '<tr>';
+    for (let i = 0; i < firstDay; i++) {
+        calendar += '<td></td>';
+    }
+
+    // Fill in the days
+    while (date.getMonth() === month - 1) {
+        let day = date.getDate();
+        let isHighlighted = highlightedDates.includes(day);
+        calendar += `<td class="${isHighlighted ? 'highlighted' : ''}">${day}</td>`;
+        if (date.getDay() === 6) calendar += '</tr><tr>'; // Start new row after Saturday
+        date.setDate(day + 1);
+    }
+
+    // Close any open table rows and finish the table
+    calendar += '</tr></tbody></table>';
+
+    // Set the calendar HTML
+    container.innerHTML = calendar;
+}
+
+// Example usage
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().getMonth() + 1;
+const bandPlayingDates = [28]; // Replace with actual dates
+createCalendar('calendar-widget', currentYear, currentMonth, bandPlayingDates);
+	</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>More on Architecture</title>
+	<style>
+		body
+		{
+			background-color: cornsilk;
+			height: 100%;
+			line-height: 1.8;
+			font-family: "Lucida Console", "Courier New", monospace;
+		}
+		#discussion-container
+		{
+			max-width: 400px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		/* hyperlinks color + function */
+		a 
+		{
+		  color: black;
+		  background-color: transparent;
+		  text-decoration: none; /* Remove underline */
+		}
+
+		/* Link styles for visited links */
+		a:visited 
+		{
+		  color: lightsalmon;
+		  background-color: transparent;
+		  text-decoration: none; /* Remove underline */
+		}
+
+		/* Link styles for hovered links */
+		a:hover 
+		{
+		  color: #E8C1C9;
+		  background-color: transparent;
+		  text-decoration: underline; /* Add underline on hover */
+		}
+		.message
+		{
+			background-color: #f0f0f0;
+			border: 1px solid #ddd;
+			padding: 10px;
+			margin-bottom: 10px;
+			
+		}
+		h1,h2 
+		{
+			text-align : center;
+			font-family: "Lucida Console", "Courier New", monospace;
+		}
+		h3
+		{
+			text-align: left;
+			font-family: "Lucida Console", "Courier New", monospace;
+		}
+		html
+		{
+			height: 100%;
+			line-height: 1.8;
+		}
+		.center 
+		{
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  width: 50%;
+		}
+		/* Box container for text */
+		.box
+		{
+		  width: 320px;
+		  padding: 10px;
+		  border: 5px solid #9B8C8C;
+		  margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class = "w3-top">
+		<div class="w3-bar w3-white w3-card w3-center" id="myNavbar">
+		</div>
+		<!-- Right-sided navbar links -->
+		<div class="w3-hide-small center" >
+		  <a href = "cta.html"> Urban Architecture </a> <br>
+			<a href= "../index.html" > Home </a> <br>	  
+		</div>
+	</div>
+	<h2> I want to know what you think! Join the discussion below : </h2>
+	<div id = "discussion-container">
+		<h1> Discussion Board </h1>
+		<div id = "messages"> 
+			<!-- discussion messages should go here -->
+		</div>
+		<form id = "post-form">
+			<input type = "text" id = "name" placeholder= "Your Name" required >
+			<textarea id= "message" placeholder="Enter your message" required></textarea>
+			<button type = "submit"> Post </button>
+		</form>
+	</div>
+	
+	<script> 
+		const postForm = document.getElementById("post-form");
+		const messageContainer = document.getElementById("messages");
+		
+		postForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+
+		if(name.trim() !== "" && message.trim() !== "")
+			{
+				const messageDiv = document.createElement("div");
+				messageDiv.classList.add("message");
+				messageDiv.innerHTML = `<strong>${name}:</strong> ${message}`;
+				messageContainer.appendChild(messageDiv);
+				
+				//clear input
+				document.getElementById("name").value = "";
+				document.getElementById("message").value = "";
+			}
+		});
+		
+		/* comments will not be stored when people make them, because that is a server architecture design that I am pretty sure I do not have access to. */
+	</script>
+	<h3> Resources to Learn more </h3>
+	<div class = "box"> <a href = "https://www.theguardian.com/society/2015/feb/18/defensive-architecture-keeps-poverty-undeen-and-makes-us-more-hostile"> Defensive Architecture Makes us More Hostile </a> <br>
+		  <a href = " https://nationalhomeless.org/get-involved/"> How we can Help</a> <br> 
+		  <a href = "https://parametric-architecture.com/anti-anti-hostile-architecture-simple-ways-for-inclusive-design/"> Ideas for Inclusive Design </a></div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>More on Architecture</title>
+<link href="../css/navbar.css" rel="stylesheet">
+<link href="../css/proj2css.css" rel="stylesheet">
+<link href="../bootstrap-grid.css" rel="stylesheet">
+<link href="../css/proj2_pg2.css" rel="stylesheet">
+</head>
+
+<body>
+<nav>
+  <!-- nav bar links to specific instances in the page itself as well as to the about page -->
+  <ul>
+    <li><a href="proj2_pg1.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="proj2_pg2.html">Discussion</a></li>
+  </ul>
+</nav>
+
+<h1>Discussion Board</h1>
+<div id="discussion-container">
+  <div id="messages">
+    <!-- discussion messages should go here -->
+  </div>
+  <form id="post-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <textarea id="message" placeholder="Enter your message" required></textarea>
+    <button type="submit">Post</button>
+  </form>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <form role="form" class="form-inline">
+        <p>Want to receive newsletters about topics like this?</p>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </div>
+    <img alt="denver" src="../images/cta_couch_bridge.jpg" />
+    <div class="col-md-4">
+
+      <div class="infobox">
+        <h3>Resources to learn more</h3>
+        <a href="https://www.theguardian.com/society/2015/feb/18/defensive-architecture-keeps-poverty-undeen-and-makes-us-more-hostile">
+          Defensive Architecture makes us more hostile
+        </a>
+        <br>
+        <a href="https://nationalhomeless.org/get-involved/">How we can help</a><br>
+        <a href="https://parametric-architecture.com/anti-anti-hostile-architecture-simple-ways-for-inclusive-design">
+          Ideas for Inclusive Design
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const postForm = document.getElementById("post-form");
+  const messageContainer = document.getElementById("messages");
+
+  postForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const message = document.getElementById("message").value;
+
+    if (name.trim() !== "" && message.trim() !== "") {
+      const messageDiv = document.createElement("div");
+      messageDiv.classList.add("message");
+      messageDiv.innerHTML = `<strong>${name}:</strong> ${message}`;
+      messageContainer.appendChild(messageDiv);
+
+      // Clear input
+      document.getElementById("name").value = "";
+      document.getElementById("message").value = "";
+    }
+  });
+
+  const messageContainer = document.getElementById("messages");
+  const preWrittenMessages = [
+    "What are some resources to learn more about this topic?",
+    "I have a question about defensive architecture...",
+    "Defensive architecture can have significant social impacts...",
+  ];
+
+  function simulateTyping(message, index) {
+    setTimeout(() => {
+      if (index < message.length) {
+        messageContainer.innerHTML += message[index];
+        simulateTyping(message, index + 1);
+      } else {
+        // After typing is complete, add a line break for the next message
+        messageContainer.innerHTML += "<br>";
+      }
+    }, 70); // Adjust typing speed as needed
+  }
+
+  function displayPreWrittenMessages() {
+    preWrittenMessages.forEach((message, index) => {
+      setTimeout(() => {
+        messageContainer.innerHTML = ""; // Clear previous message
+        simulateTyping(message, 0);
+      }, index * 4000); // Adjust the delay between messages
+    });
+  }
+
+  // Delay the initial display of pre-written messages
+  setTimeout(displayPreWrittenMessages, 5000); // Adjust the delay if needed
+</script>
+
+</body>
+</html>

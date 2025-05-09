@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Urban Architecture</title>
+	<style>
+		body
+		{
+			background-color: cornsilk;
+			text-align : center;
+			font-family: "Lucida Console", "Courier New", monospace;
+			height: 100%;
+			line-height: 1.8;
+		}
+		h1,h2,h3 
+		{
+			text-align : center;
+			font-family: "Lucida Console", "Courier New", monospace;
+			
+		}
+		/* hyperlinks color + function */
+		a 
+		{
+		  color: black;
+		  background-color: transparent;
+		  text-decoration: none; /* Remove underline */
+		}
+
+		/* Link styles for visited links */
+		a:visited 
+		{
+		  color: lightsalmon;
+		  background-color: transparent;
+		  text-decoration: none; /* Remove underline */
+		}
+
+		/* Link styles for hovered links */
+		a:hover 
+		{
+		  color: #E8C1C9;
+		  background-color: transparent;
+		  text-decoration: underline; /* Add underline on hover */
+		}
+		p
+		{
+			font-size: 18px;
+		}
+		p.dotted 
+		{border-style: dotted;}
+		div.b 
+		{
+  			word-wrap: break-word;
+			font-size: 18px;
+		}
+		html
+		{
+			height: 100%;
+			line-height: 1.8;
+		}
+		.center 
+		{
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  width: 50%;
+		}
+		
+		.container
+		{
+			position: relative;
+			font-family: "Lucida Console", "Courier New", monospace;
+		}
+		.text-block
+		{
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			background-color: black;
+			color: white;
+			padding-left: 20px;
+			padding-right: 20px;
+			
+		}
+		.box 
+		{
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			background-color: black;
+			color: white;
+			padding: 20px;
+			max-width: 500px;
+			margin: 0 auto;   
+		}
+		.image-block
+		{
+			flex: 0 0 auto;
+			width: 50%;
+			text-align: center;
+			padding-right: 20px;
+		}
+		img
+		{
+			max-width: 100%;
+			height: auto; 
+			display: block;
+			margin: 0 auto; 
+		}
+		.text
+		{
+			flex: 1;
+			padding-left: 20px;
+		}
+		div.contain 
+		{
+		  text-align: center;
+		}
+
+		ul.myUL {
+		  display: inline-block;
+		  text-align: left;
+		}
+		#comment-box 
+		{
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			max-width: 300px;
+			background-color: #f1f1f1;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+			z-index: 999;
+		}
+
+		.hidden 
+		{
+			display: none;
+		}
+
+		#close-button 
+		{
+			background: none;
+			border: none;
+			font-size: 20px;
+			cursor: pointer;
+			float: right;
+			color: #555;
+		}
+
+		#close-button:hover 
+		{
+			color: #333;
+		}
+	</style>
+</head>
+<!-- urban architecture and hostile architecture. denver, huntsville, LA -->
+<body>
+	<!-- need to put specific links to the more information tab, will direct to the other .html that goes into detail about urban and degensive architecture-->
+	<div class = "w3-top">
+		<div class="w3-bar w3-white w3-card" id="myNavbar">
+		<a href="#home" class="w3-bar-item w3-button w3-wide">Defensive Architecture</a>
+		</div>
+		<!-- Right-sided navbar links -->
+		<div class="w3-right w3-hide-small">
+		  <a href= "../index.html" > HOME </a> <br>
+		  <a href = "cta_2.html"> Discussion </a> <br>
+		  <a href="#whatisit" > WHAT IS IT? </a> <br> 
+		  <a href="#moreinformation" > MORE </a> <br>
+			
+		<!-- adding an image  -->
+		<div class = "container">
+			<img src = "../images/downtown_denver.jpg" alt = "Downtown Denver" style = "width: 40%;" >
+			<div class = "text-block">
+				<h4> Downtown Denver </h4>
+				<p> A picture of some of the architecture in busy downtown denver </p>
+			</div>
+			</div>
+			<div class="w3-container w3-light-grey" style="padding:128px 16px" id="whatisit">
+			<h2> What Is Defensive Architecture? </h2>
+				<p> Defensive architecture is a type of design cities (mostly large cities) use in order to prevent certain types of activity from happening. This type of architecture targets the <em> young </em>, the <em> homeless </em>, and the <em> poor </em> communities. </p>
+				</div>
+			<div class = "box"> 
+				<div class = "image-block" > 
+			<img src = "../images/defensivearch.png" alt = "sketch of the defensive architecture" >
+				</div>
+			<div class = "text" >
+				<h4> Architecture Sketch </h4>
+				<p> An example of one of the designs that are implemented in Washington, DC </p>
+			</div>
+			</div>
+			
+			<div class = "w3-container w3-light-grey" style = "padding:128px 16px" id = "moreinformation">
+			<h1> More </h1>
+			<h2> Why you should care </h2> 
+				<div class = "b">
+					<p class = "dotted">
+					Defense Architecture is usually put in place to disuade the homeless population of loitering, in order to keep the general population from frequenting those areas. Why are we trying to hide the homelessness instead of supporting them? Building these types of defensive structures are used to 'promote safety', however, it only hides the real problem. We have a steady increase of homeless people, with no support system put in place for them. Instead, we have states putting money into building new strip malls, where they could put the money into building shelters for disabled veterans, women and children, and anyone who has found their way out of a home. To read more about this, this link provides a good summary of defensive architecture design and hidden hositility in DC. 
+					<a href = "https://www.hiddenhostilitydc.com/rational" target = "display"> Rationale for Defensive Architecture </a>
+				</p>
+				</div>
+				<br>
+				
+			<h2> What can we do to help </h2>
+				<div class = "contain"> 
+				<ul class = "myUL"> 
+				<li> <b> Donating </b> - Donating unused clothing, excess soaps, and other items can help those who don't have access to them</li>
+				<li> <b> Challenge Ideas </b> - When you walk around your city and you look at the defensive design structures, ask yourself, 'Who owns this city?' , 'Is the city for us, the people, or is it for tourists?'</li>
+				<li> <b> Read </b> - You don't have to be the one who makes a drastic change, but reading up on what it is, why the cities implement this type of stuff, etc. </li> 
+				<li> By clicking the 'Open Comment Box' you can read a story of a man who made a change just by placing a Buddha Statue across from his home.</li>
+					</ul>
+				</div>
+				<div id="comment-box" class="hidden">
+					<button id="close-button">×</button>
+					<p>Change can be as simple as taking a (non-violent) idea and bringing it to life. This is one of the stories that I ran across when researching Urban design and Defensive Architecture : Dan Stevenson, tired of seeing trash being dumped on the traffic-diverting median installed across from his home, decided to take matters into his own hands. He and his wife Lu purchased a Buddha statue — a decidedly “neutral” figure — from a hardware store and installed it on the median. Not only did the pile-up of garbage bags, mattresses, and other trash cease, but people began leaving offerings for the Buddha, even decorating it, and eventually building a structure around it. The local Vietnamese community began praying at the statue daily, and within two years crime in the area decreased by 82%.</p>
+				</div>
+				<button id="open-comment-box">Open Comment Box</button>
+
+				<h2> More Resources </h2>
+				<p> Click the link to read a full report on the Criminalization of Homelessness in Denver </p> 
+				<a href = "https://denverhomelessoutloud.files.wordpress.com/2019/04/unhealthy-by-design-final.pdf" target = "display"> Unhealthy By Design </a> <br> 
+				<a href = "https://bootcamp.uxdesign.cc/using-design-to-effect-change-d19f04437a8a" target = "blank"> Buddha Statue </a>
+			</div>
+			
+			<h1> Join the Discussion! </h1> <br>
+			<p> Have any ideas, thoughts, opinions on this topic or similar topics? Join the discussion by clicking the link here : </p> <a href = "cta_2.html" > Discussion Board </a> 	
+		</div>
+	</div>
+	<script>
+	document.addEventListener("DOMContentLoaded", function () 
+	{
+		const commentBox = document.getElementById("comment-box");
+		const openButton = document.getElementById("open-comment-box");
+		const closeButton = document.getElementById("close-button");
+
+		openButton.addEventListener("click", function () {
+			commentBox.style.display = "block";
+		});
+
+		closeButton.addEventListener("click", function () {
+			commentBox.style.display = "none";
+		});
+	});
+	</script>
+	
+</body>
+	
+</html>

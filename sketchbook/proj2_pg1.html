@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Urban Architecture</title>
+	<link href = "../css/navbar.css" rel = "stylesheet">
+	<link href = "../css/proj2css.css" rel = "stylesheet">
+	<link href = "../bootstrap-grid.css" rel = "stylesheet">
+	<link href= "https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<!-- urban architecture and hostile architecture. denver, huntsville, LA -->
+<body>
+	<nav>
+		<!-- nav bar links to specific instances in the page itself as well as to the about page -->
+		<ul>
+			<li> <a href = "../index.html"> Home </a></li>
+			<li> <a href = "../about.html"> About </a></li>
+			<li> <a href = "proj2_pg2.html"> Discussion </a></li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center">
+				Defensive Architecture
+			</h3><img src="../images/downtown_denver.jpg" alt="downtown colorado" width="415" height="622" class="img-thumbnail" /> <span class="badge badge-info">Downtown Denver</span>
+			<h3 class="text-muted">
+				What Is Defensive Architecture?
+			</h3>
+			<p class="text-center">
+				Defensive architecture is a type of design cities (mostly large cities) use in order to prevent certain types of activity from happening. This type of architecture targets the <em> young </em>, the <em> homeless </em>, and the <em> poor </em> communities. 
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					 <span class="badge badge-default">Architecture Sketch </span><img src="../images/defensivearch.png" alt="architecture sketch" width="307" height="307" class="img-thumbnail" />
+				</div>
+				<div class="col-md-6">
+					<h3 class="text-center">
+						Why you should care
+					</h3>
+					<p>
+						Defense Architecture is usually put in place to disuade the homeless population of loitering, in order to keep the general population from frequenting those areas. Why are we trying to hide the homelessness instead of supporting them? Building these types of defensive structures are used to 'promote safety', however, it only hides the real problem. We have a steady increase of homeless people, with no support system put in place for them. Instead, we have states putting money into building new strip malls, where they could put the money into building shelters for disabled veterans, women and children, and anyone who has found their way out of a home. To read more about this, this link provides a good summary of defensive architecture design and hidden hositility in DC. 
+					<a href = "https://www.hiddenhostilitydc.com/rational" target = "display"> Rationale for Defensive Architecture </a>
+					</p>
+					<br>
+				</div>
+			</div>
+			<h3 class="text-center">
+				What can we do to help
+			</h3>
+			
+				<ul class = "myUL"> 
+				<li> <b> Donating </b> - Donating unused clothing, excess soaps, and other items can help those who don't have access to them</li>
+				<li> <b> Challenge Ideas </b> - When you walk around your city and you look at the defensive design structures, ask yourself, 'Who owns this city?' , 'Is the city for us, the people, or is it for tourists?'</li>
+				<li> <b> Read </b> - You don't have to be the one who makes a drastic change, but reading up on what it is, why the cities implement this type of stuff, etc. </li> 
+				<li> By clicking the 'Open Comment Box' you can read a story of a man who made a change just by placing a Buddha Statue across from his home. </li>
+				 
+					</ul>
+			
+		<br>
+		<div id="comment-box" class="hidden">
+					<button id="close-button">×</button>
+					<p>Change can be as simple as taking a (non-violent) idea and bringing it to life. This is one of the stories that I ran across when researching Urban design and Defensive Architecture : Dan Stevenson, tired of seeing trash being dumped on the traffic-diverting median installed across from his home, decided to take matters into his own hands. He and his wife Lu purchased a Buddha statue — a decidedly “neutral” figure — from a hardware store and installed it on the median. Not only did the pile-up of garbage bags, mattresses, and other trash cease, but people began leaving offerings for the Buddha, even decorating it, and eventually building a structure around it. The local Vietnamese community began praying at the statue daily, and within two years crime in the area decreased by 82%.</p>
+				</div>
+				<button id="open-comment-box">Open Comment Box</button>
+
+		
+		
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="text-center">
+						More Resources
+					</h3>
+					
+						<p> Click the link to read a full report on the Criminalization of Homelessness in Denver </p> 
+				<a href = "https://denverhomelessoutloud.files.wordpress.com/2019/04/unhealthy-by-design-final.pdf" target = "display"> Unhealthy By Design </a> <br> 
+				<a href = "https://bootcamp.uxdesign.cc/using-design-to-effect-change-d19f04437a8a" target = "blank"> Buddha Statue </a>
+					
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+			
+			<h1> Join the discussion! </h1> <br>
+			<p> Have any ideas, thoughts, opinions on this topic or similar topics? Join the discussion by clicking the link here : </p> <a href = "../sketchbook/proj2_pg2.html" > Discussion Board </a> 	
+		
+	
+	<script>
+	document.addEventListener("DOMContentLoaded", function () 
+	{
+		const commentBox = document.getElementById("comment-box");
+		const openButton = document.getElementById("open-comment-box");
+		const closeButton = document.getElementById("close-button");
+
+		openButton.addEventListener("click", function () {
+			commentBox.style.display = "block";
+		});
+
+		closeButton.addEventListener("click", function () {
+			commentBox.style.display = "none";
+		});
+	});
+	</script>
+	
+</body>
+	
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<!-- creating an interactive page that allows the user to interact with the programs that I have completed 
+or create an interactive page where users can leave cute little notes that end up becoming post it notes pasted on the website
+called "bullitin board"-->
+<head>
+<meta charset="utf-8">
+<style>
+	body,h1,h2,h3 
+	{
+		text-align : center;
+		font-family: "Lucida Console", "Courier New", monospace;
+	}
+	body,html
+	{
+		height: 100%;
+		line-height: 1.8;
+	}
+	.center 
+	{
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 50%;
+	}
+	body
+	{
+		background-color: ghostwhite;
+	}
+	
+	.w3-bar .w3-button 
+		{
+		padding: 16px;
+		}
+	.column 
+	{
+	  float: left;
+	  width: 50%;
+	  padding: 5px;
+	}
+
+/* Clearfix (clear floats) */
+	.row:after 
+	{
+	  content: "";
+	  clear: both;
+	  display: table
+	}
+
+</style>
+<title>Becks on Paper</title>
+</head>
+
+	
+	<!-- Actual idea for this web page will be a website for a brand.-->
+	
+<body>
+	<!--Navigation Bar that sits on the top of the page to make it more professional looking -->
+	<div class = "w3-top">
+		<div class="w3-bar w3-white w3-card" id="myNavbar">
+		<a href="#home" class="w3-bar-item w3-button w3-wide">Becks On Paper</a>
+		</div>
+		<!-- Right-sided navbar links -->
+		<div class="w3-right w3-hide-small">
+		  <a href= "../index.html" class = "w3-bar-item w3-button"><i class="fa fa-user"></i> HOME </a>
+		  <a href="#about" class="w3-bar-item w3-button"> ABOUT</a>
+		  <a href="#products" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PRODUCTS </a>
+		  <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+		</div>
+	</div>
+		<img src = "../images/becksonpaper_background.webp" alt = "Becksonpaper" class = "center">
+	<!-- About Section -->
+	<div class="w3-container" style="padding:128px 16px" id="about">
+	  <h3 class="w3-center">ABOUT THE COMPANY</h3>
+	  <div class="w3-row-padding w3-center" style="margin-top:64px">
+		<div class="w3-quarter">
+		  <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+			<img src = "../images/multicolor_paper.PNG" alt = "multicolored paper" style = "width:50%;">
+		  </div>
+		  <p>One woman weaves new paper out of old scraps. Hides wildflowers inside. Stick around, she’d love to have you.</p>
+		</div>
+		<div class="w3-quarter">
+		  <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+		  <p>Becks On Paper is a homemade paper making business. The art of making paper is one that is filled with history.</p>
+		</div>
+	  </div>	
+	
+	<!-- section of the store that actually shows off the products -->
+	<div class="w3-container" style="padding:128px 16px" id="work">
+		<h3 class = "w3-cemter"> Our Products </h3>
+		<div class="w3-row-padding" style="margin-top:64px">
+			<div class = "row" > 
+				<div class="w3-col l3 m6">
+					<div class = "column" > 
+					<img src="../images/greenstackpaper.jpg" onclick="onClick(this)" class="w3-hover-opacity" alt="Paper made for Tea" style = "width:50%;">
+					</div>
+				</div>
+				<div class="w3-col l3 m6">
+					<div class = "column"> 
+					<img src="../images/paperballs.jpg" onclick="onClick(this)" class="w3-hover-opacity" alt="MultiColor on Same Paper" style = "width:50%;">
+					</div>
+				</div>
+				<div class="w3-col l3 m6">
+					<div class = "column"> 
+					<img src="../images/purplepaper.PNG" onclick="onClick(this)" class="w3-hover-opacity" alt="Purple Paper" style = "width:50%;">
+					</div>
+				</div>
+			  </div>
+			</div>
+	</div>
+	<!-- Contact Section -->
+	<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+	  <h3 class="w3-center">CONTACT</h3>
+	  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+	  <div style="margin-top:48px">
+		<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Huntsville, AL</p>
+		<p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 256 - 000-00000</p>
+		<p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Instagram: @becksonpaper</p>
+		<br>
+		<form action="/action_page.php" target="_blank">
+		  <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+		  <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+		  <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+		  <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+		  <p>
+			<button class="w3-button w3-black" type="submit">
+			  <i class="fa fa-paper-plane"></i> SEND MESSAGE
+			</button>
+		  </p>
+		</form>
+		<!-- Image of location/map -->
+    <img src="../images/thankyoucards.PNG" alt = "Thank you cards" class="w3-image w3-greyscale" style="width:50%;margin-top:48px">
+  </div>
+</div>
+		
+		 
+</body>
+</html>

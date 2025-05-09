@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css"> 
+    <style>
+        /* Artistic Background */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(135deg, #f4e2d8, #ba5370);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+           /* font-size: 2em; */
+           /* text-transform: uppercase; */
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 20px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 12px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 24px;
+            margin: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Artistic Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+        }
+
+        /* Lightbox Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            width: 70%;
+            max-width: 700px;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #bbb;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>S. A. Ibsen - Photography</h1>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="photography.html">Photography</a></li>
+        </ul>
+
+<!-- Carousel Section -->
+<div class="carousel-container">
+    <div class="carousel-slide">
+        <img src="./images/photography/IMG_8525.PNG" alt="Aidan Portrait">
+        <img src="./images/photography/IMG_8528.PNG" alt="Kristine">
+        <img src="./images/wilmalis.jpg" alt="Wilmalis Portrait">
+        <img src="./images/photography/20.png" alt = "Trevor and Claire Engagement">
+        <img src="./images/photography/Screenshot 2025-05-08 152243.png" alt="Common Man Band">
+        <img src="./images//photography/IMG_9924.jpg" alt = "Friends">
+        <img src="./images/photography/IMG_9824.png" alt = "Smorgasbord">
+
+    </div>
+    <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+    <span class="next" onclick="moveSlide(1)">&#10095;</span>
+</div>
+
+<!-- Artistic Portfolio Grid -->
+<div class="portfolio-grid">
+    <div class="portfolio-item">
+        <img src="./images/hannah.jpg" alt="Hannah Portrait" onclick="openModal(this.src)">
+    </div>
+    <div class="portfolio-item">
+        <img src="./images/claire.jpg" alt="Claire Portrait" onclick="openModal(this.src)">
+    </div>
+    <div class="portfolio-item">
+        <img src="./images/wilmalis.jpg" alt="Wilmalis Portrait" onclick="openModal(this.src)">
+    </div>
+    <div class="portfolio-item">
+        <img src="./images/photography/IMG_8525.PNG" alt="Aidan" onclick="openModal(this.src)">
+    </div>
+    <div class="portfolio-item">
+        <img src="./images/photography/20.png" alt="Claire and Trevor Engagement" onclick="openModal(this.src)">
+    </div>
+    <div class="portfolio-item">
+        <img src="./images/photography/IMG_8528.PNG" alt="Kristine" onclick="openModal(this.src)">
+    </div>
+    <div class="portfolio-item">
+        <img src="./images/photography/Screenshot 2025-05-08 152243.png" alt="Common Man Band" onclick="openModal(this.src)">
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; S. A. Ibsen - Artistic Photography</p>
+</div>
+
+<script>
+    /* Carousel Logic */
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+        const slides = document.querySelector(".carousel-slide");
+        const totalSlides = slides.children.length;
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    /* Modal Logic */
+    function openModal(src) {
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = src;
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
